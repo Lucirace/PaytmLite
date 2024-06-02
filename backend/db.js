@@ -2,7 +2,8 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 //const { Schema } = require("zod");
-mongoose.connect("DATABASE_URL");
+const apiUrl = process.env.DATABASE_URL
+mongoose.connect("apiUrl");
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
