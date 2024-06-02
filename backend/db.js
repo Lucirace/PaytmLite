@@ -1,8 +1,8 @@
+require("dotenv").config();
+
 const mongoose = require("mongoose");
 //const { Schema } = require("zod");
-mongoose.connect(
-  "mongodb+srv://admin:9027508891@paytmlitecluster.exobnly.mongodb.net/" // "mongodb+srv://luci:DlTf33br5A1f50vv@cluster0.bcbsut4.mongodb.net/basicPaytm"
-);
+mongoose.connect("process.env.DATABASE_URL");
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
